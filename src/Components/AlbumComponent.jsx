@@ -42,7 +42,7 @@ class AlbumComponent extends Component {
                     </div>
                   </div>
 
-                  <LikeButton />
+                  <LikeButton songID={album.id} />
                 </Card.Text>
               )}
             </Card.Body>

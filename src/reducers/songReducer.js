@@ -1,9 +1,11 @@
 export default (state = {}, action) => {
   switch (action.type) {
-    case "TOGGLE_PLAY":
+    case "PLAY_SONG":
       return {
         ...state,
-        currentlyPlaying: !state.currentlyPlaying
+        currentlyPlaying: true,
+        //if the song is not currently playing then set the song detail to null
+        songDetail: action.payload
       };
     case "ADD_SONG_TO_LIKE":
       return {

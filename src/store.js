@@ -6,7 +6,13 @@ import songReducer from "./reducers/songReducer";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // defining initial state
-const initialState = { song: { currentlyPlaying: null, like: [] } };
+const initialState = {
+  song: {
+    currentlyPlaying: null, //true/false
+    songDetail: null, //song name, artist name etc.
+    like: [] //song id(s) user liked
+  }
+};
 
 // use combined Reducer when importing more reducers
 const combinedReducer = combineReducers({

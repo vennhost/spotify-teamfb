@@ -1,43 +1,32 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Container, Button } from "react-bootstrap";
+import SimpleStorage from "react-simple-storage";
 
-class LikeButton extends React.Component {
-    state = {
-        likes: "Unliked",
-        updated: false
-    }
-    render() {
-        return (
-            <div>
-                <button onClick={this.updateLikes}>Like</button>
-                <p>{this.state.likes}</p>
-            </div>
+const LikeButton = () => {
+    const [value, setValue] = React.useState('Like');
+        const onClick = event => {
+            localStorage.setItem('myValueInLocalStorage', 'Liked');
+            setValue('Liked');
+          };
+    return (
+        <div>
+                
+        <button onClick={onClick}>{value}</button>
+        
+    </div>
+    );
+  };
+  export default LikeButton;
 
-        );
-    }
 
-    updateLikes = () => {
 
-        if (!this.state.updated) {
-            this.setState((prevState, props) => {
-                return {
-                    likes: "Liked",
-                    updated: true
-                };
-            });
 
-        } else {
 
-            this.setState((prevState, props) => {
-                return {
-                    likes: "Unliked",
-                    updated: false
-                };
-            });
 
-        }
-    }
 
-}
 
-export default LikeButton;
+
+
+
+
+

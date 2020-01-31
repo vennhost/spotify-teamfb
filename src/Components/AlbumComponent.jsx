@@ -4,6 +4,7 @@ import AudioHelper from "../AudioHelper";
 import AudioPlayer from 'react-h5-audio-player';
 import Comments from "./Comments";
 import LikeButton from './Like';
+import SimpleStorage from "react-simple-storage";
 
 class AlbumComponent extends Component {
     state = {paused: true};
@@ -32,11 +33,13 @@ class AlbumComponent extends Component {
                                         className="material-icons float-right">play_arrow</i></div>
                                         
                                 </div>
+                                
                                 <LikeButton/>
 
                             </Card.Text>}
                         </Card.Body>
                     </Card>
+                    
                 </Col>
 
             </Row>

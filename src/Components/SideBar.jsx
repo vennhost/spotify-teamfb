@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {Nav, NavItem, NavLink} from 'reactstrap'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import LikeButton from "./Like"
 
 class SideBar extends Component {
     state = {}
 
     render() {
         return (
+           
             <Nav className="over" vertical>
                 <NavItem>
                     <NavLink href="#">Charts</NavLink>
@@ -15,6 +17,7 @@ class SideBar extends Component {
                     <NavLink href="#">New Releases</NavLink>
                 </NavItem>
             </Nav>
+            
         );
     }
 }

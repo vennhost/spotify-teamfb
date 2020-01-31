@@ -4,9 +4,10 @@ import SimpleStorage from "react-simple-storage";
 
 const LikeButton = () => {
     const [value, setValue] = React.useState('Like');
-        const onClick = event => {
+        const onClick = () => {
             localStorage.setItem('myValueInLocalStorage', 'Liked');
             setValue('Liked');
+            localStorage.getItem('Liked')
           };
     return (
         <div>

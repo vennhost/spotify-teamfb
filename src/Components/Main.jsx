@@ -75,8 +75,16 @@ class Main extends Component {
             <Row className="sticky-bottom">
               <Col className={"col-12"}>
                 {/* get the song detail from redux this.props.song.songDetail */}
-                <div style={{ backgroundColor: "black", color: "white" }}>
-                  {this.props.song.songDetail.title}
+                <div class="row" style={{ backgroundColor: "black", color: "white" }}>
+                  <div class="col-xs-12 col-sm-4">
+                    ARTIST: {this.props.song.songDetail.artist.name}
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    SONG: {this.props.song.songDetail.title}
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    ALBUM: {this.props.song.songDetail.album.title}
+                  </div>
                 </div>
                 <AudioPlayer
                   autoPlay={true}
@@ -86,6 +94,7 @@ class Main extends Component {
                   //   src={this.state.album.preview}
                   src={this.props.song.songDetail.preview}
                   onPlay={e => console.log("onPlay")}
+                  volume={0.1}
                   // other props here
                 />
               </Col>

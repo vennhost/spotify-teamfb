@@ -3,6 +3,7 @@ import {Card, Col, Row } from "react-bootstrap";
 import AudioHelper from "../AudioHelper";
 import AudioPlayer from 'react-h5-audio-player';
 import Comments from "./Comments";
+import LikeButton from './Like';
 
 class AlbumComponent extends Component {
     state = {paused: true};
@@ -29,7 +30,9 @@ class AlbumComponent extends Component {
                                     <div className="artist-name">{album.artist.name}</div>
                                     <div onClick={this.togglePlay}><i
                                         className="material-icons float-right">play_arrow</i></div>
+                                        
                                 </div>
+                                <LikeButton/>
 
                             </Card.Text>}
                         </Card.Body>

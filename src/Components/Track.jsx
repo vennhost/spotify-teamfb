@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import moment from "moment";
 import AudioHelper from "../AudioHelper";
+import LikeButton from "./Like"
 
 class Track extends Component {
     state = {paused: true};
@@ -28,9 +29,11 @@ class Track extends Component {
                 <td className="track-title">{track.title}</td>
                 <td>{track.artist.name}</td>
                 <td>{minutes}:{seconds}</td>
+                <td className="like-button"><LikeButton /></td> 
                 <td className="player-icon">
                     <div onClick={this.togglePlay}><i
                         className="material-icons float-right">play_arrow</i></div>
+                         
                 </td>
             </tr>
         );
